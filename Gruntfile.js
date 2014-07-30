@@ -37,7 +37,7 @@ module.exports = function (grunt) {
             }
         },
         compass: {
-            dist: {
+            dev: {
                 options: {
                     sassDir: 'app/styles',
                     cssDir: 'dist/css'
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            dist: {
+            dev: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['images/**'], dest: 'dist'},
