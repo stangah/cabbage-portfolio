@@ -98,7 +98,7 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            devDependencies: {
+            dev: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['images/**'], dest: 'dist'},
