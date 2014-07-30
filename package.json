@@ -32,6 +32,7 @@
     "grunt-open": "^0.2.3"
   },
   "dependencies": {
-    "angular": "^1.2.19"
+    "angular": "^1.2.19",
+    "angular-ui-router": "^0.2.10"
   }
 }

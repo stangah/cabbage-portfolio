@@ -1,3 +1,46 @@
-div{
-  border: 1px solid red;
+@import 'root.scss';
+
+body{
+  margin: 0;
+}
+
+.main-container{
+  padding-top: 20px;
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  background: url('../images/fake-header.png') 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.footer{
+  background-color: rgb(241,176,77);
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  .footer-links{
+    margin: 0 auto;
+    line-height: 80px;
+    height: 100%;
+    width: 600px;
+    text-align: justify;
+    a{
+      color: white;
+      display: inline-block;
+      font-size: 15px;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+    }
+    &:after{
+      content: '';
+      width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+      display: inline-block;
+    }
+  }
 }

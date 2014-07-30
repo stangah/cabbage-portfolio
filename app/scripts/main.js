@@ -1,12 +1,17 @@
 'use strict';
 
-var angular = require('angular'); // That's right! We can just require angular as if we were in node
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
 
-var WelcomeCtrl = require('./controllers/WelcomeCtrl'); // We can use our WelcomeCtrl.js as a module. Rainbows.
-
+var WelcomeCtrl = require('./controllers/WelcomeCtrl');
 var LinkFooterDirective = require('./directives/LinkFooterDirective');
+var HeaderLogoDirective = require('./directives/HeaderLogoDirective');
+var routes = require('./routes');
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ui.router']);
+
+
 app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
-
 app.directive('linkFooter', LinkFooterDirective);
+app.directive('headerLogo', HeaderLogoDirective);
+app.config(routes);

@@ -1,0 +1,46 @@
+.root-view{
+  .intro{
+    margin-top: 10px;
+    width: 100%;
+    div{
+      &.hi{
+        font-family: 'Droid Serif', serif;
+        font-size: 20px;
+      }
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+    }
+  }
+
+  .circles{
+    margin-top: 50px;
+    .container{
+      margin: 0 auto;
+      width: 700px;
+      height: 300px;
+    }
+    img{
+      border-radius: 150px;
+      width: 300px;
+      height: 300px;
+    }
+    img.ux{
+      float: left;
+      background: url('../images/home_icon-07.png') 0 0;
+      background-size: 300px;
+      background-repeat: no-repeat;
+      &:hover{
+        background-position: 0 -299px;
+      }
+    }
+    img.illustrations{
+      float: right;
+      background: url('../images/home_icon-08.png') 0 0;
+      background-size: 300px;
+      background-repeat: no-repeat;
+      &:hover{
+        background-position: 0 -299px;
+      }
+    }
+  }
+}

@@ -56,6 +56,13 @@ module.exports = function (grunt) {
                 options: {
                     livereload: true
                 }
+            },
+            images: {
+                files: ['app/images/**/*'],
+                tasks: ['copy'],
+                options: {
+                    livereload: true
+                }
             }
         },
         clean: {
@@ -74,6 +81,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
+                    {expand: true, cwd: 'app', src: ['images/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['index.html'], dest: 'dist'}
                 ]
             }
