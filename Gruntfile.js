@@ -83,12 +83,12 @@ module.exports = function (grunt) {
         clean: {
             dist: {
                 files: [{
-                    src: ['dist/**/*']
+                    src: ['dist/**/*', 'dist']
                 }]
             },
             azure: {
                 files: [{
-                    src: ['azure']
+                    src: ['azure/**/*', 'azure']
                 }]
             }
         },
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            dev: {
+            devDependencies: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['images/**'], dest: 'dist'},
