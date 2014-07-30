@@ -25,13 +25,28 @@ module.exports = function (grunt) {
             }
         },
         browserify: {
-            'dist/bundle.js': ['app/scripts/main.js']
+            dev: {
+                files: {
+                    'dist/bundle.js': ['app/scripts/main.js']
+                }
+            },
+            azure: {
+                files: {
+                    'azure/bundle.js': ['app/scripts/main.js']
+                }
+            }
         },
         compass: {
             dist: {
                 options: {
                     sassDir: 'app/styles',
                     cssDir: 'dist/css'
+                }
+            },
+            azure: {
+                options: {
+                    sassDir: 'app/styles',
+                    cssDir: 'azure/css'
                 }
             }
         },
@@ -70,6 +85,11 @@ module.exports = function (grunt) {
                 files: [{
                     src: ['dist/**/*']
                 }]
+            },
+            azure: {
+                files: [{
+                    src: ['azure']
+                }]
             }
         },
         open: {
@@ -78,12 +98,29 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            main: {
+            dist: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['images/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['index.html'], dest: 'dist'}
                 ]
+            },
+            azure: {
+                files: [
+                    {expand: true, cwd: 'app', src: ['views/**'], dest: 'azure'},
+                    {expand: true, cwd: 'app', src: ['images/**'], dest: 'azure'},
+                    {expand: true, cwd: 'app', src: ['index.html'], dest: 'azure'}
+                ]
+            }
+        },
+        shell: {
+            azure: {
+                command: [
+                    'git add azure/.',
+                    'git commit -m "temp for azure"',
+                    'git push azure -f',
+                    'echo "DONEDONEDONEDONE"'
+                ].join('&&')
             }
         },
         connect: {
@@ -121,22 +158,31 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browserify');
 
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask('build', function() {
         return grunt.task.run([
-            'browserify',
-            'compass',
-            'copy'
+            'browserify:dev',
+            'compass:dev',
+            'copy:dev'
+        ]);
+    });
+
+    grunt.registerTask('azure', function() {
+        return grunt.task.run([
+            'browserify:azure',
+            'compass:azure',
+            'copy:azure',
+            'shell:azure'
         ]);
     });
 
     grunt.registerTask('server', function() {
 
         return grunt.task.run([
-            'clean',
+            'clean:dist',
             'build',
             'connect:livereload',
             'open',
