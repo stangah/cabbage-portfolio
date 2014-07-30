@@ -18,7 +18,6 @@
   "homepage": "https://github.com/stangah/cabbage-portfolio",
   "devDependencies": {
     "connect-livereload": "^0.4.0",
-    "express": "^4.7.2",
     "grunt": "^0.4.5",
     "grunt-browserify": "^2.1.4",
     "grunt-cli": "^0.1.13",
@@ -31,10 +30,11 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-open": "^0.2.3",
-    "grunt-shell": "^0.7.0"
-  },
-  "dependencies": {
+    "grunt-shell": "^0.7.0",
     "angular": "^1.2.19",
     "angular-ui-router": "^0.2.10"
+  },
+  "dependencies": {
+    "express": "^4.7.2"
   }
 }
