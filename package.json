@@ -2,7 +2,6 @@
   "name": "cabbage-portfolio",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,11 +29,10 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-open": "^0.2.3",
-    "grunt-shell": "^0.7.0",
-    "angular": "^1.2.19",
-    "angular-ui-router": "^0.2.10"
+    "grunt-shell": "^0.7.0"
   },
   "dependencies": {
     "express": "^4.7.2"
-  }
+  },
+  "engine": "node >= 0.10.29"
 }

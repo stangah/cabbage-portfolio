@@ -119,7 +119,8 @@ module.exports = function (grunt) {
                     'git add azure/.',
                     'git commit -m "temp for azure"',
                     'git push azure -f',
-                    'echo "DONEDONEDONEDONE"'
+                    'git reset --hard HEAD^',
+                    'echo "Finished deploying to Azure"'
                 ].join('&&')
             }
         },
