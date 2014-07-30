@@ -173,10 +173,12 @@ module.exports = function (grunt) {
 
     grunt.registerTask('azure', function() {
         return grunt.task.run([
+            'clean:azure',
             'browserify:azure',
             'compass:azure',
             'copy:azure',
-            'shell:azure'
+            'shell:azure',
+            'clean:azure'
         ]);
     });
 
