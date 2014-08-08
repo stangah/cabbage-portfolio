@@ -3,6 +3,14 @@
 var ProjectsController = function($scope, $stateParams) {
   $scope.id = $stateParams.id || 19;
 
+  $scope.thumbnailStyle = function(id) {
+    return {
+      'background': 'url("../images/icons-' + id + '.png") 0 0',
+      'background-repeat': 'no-repeat',
+      'background-size': '70px'
+    };
+  };
+
   $scope.projects = {
     '17': {
       title: 'Old person',
