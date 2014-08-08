@@ -5,8 +5,14 @@
   </div>
 
   <div class="thumbnail-container">
-    <div ng-repeat="image in illustrations track by $index">
-      <a href="/#/projects/19"><img class="thumbnail" ng-src="../images/{{image}}"></a>
+    <div class="thumbnail" ng-repeat="image in illustrations track by $index" ng-mouseover="showOverlay = true" ng-mouseleave="showOverlay = false">
+      <a href="/#/projects/19">
+        <img class="image" ng-src="../images/{{image}}">
+        <div class="overlay" ng-class="{'show': showOverlay, 'hide': showOverlay === false}">
+          <div class="title serif">Fun Project Title</div>
+          <div class="body">Little text like this can explain each image within the project. For example, "This is an early exploration that led to xoxoxo."</div>
+        </div>
+      </a>
     </div>
   </div>
 

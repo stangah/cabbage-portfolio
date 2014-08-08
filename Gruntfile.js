@@ -53,28 +53,28 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: ['app/styles/**/*.scss'],
-                tasks: ['compass'],
+                tasks: ['compass:dev'],
                 options: {
                     livereload: true
                 }
             },
             js: {
                 files: ['app/scripts/**/*.js'],
-                tasks: ['browserify'],
+                tasks: ['browserify:dev'],
                 options: {
                     livereload: true
                 }
             },
             html: {
                 files: ['app/views/**/*.html', 'app/index.html'],
-                tasks: ['copy'],
+                tasks: ['copy:dev'],
                 options: {
                     livereload: true
                 }
             },
             images: {
                 files: ['app/images/**/*'],
-                tasks: ['copy'],
+                tasks: ['copy:dev'],
                 options: {
                     livereload: true
                 }
