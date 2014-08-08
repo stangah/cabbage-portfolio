@@ -120,6 +120,7 @@ module.exports = function (grunt) {
                     'git commit -m "temp for azure"',
                     'git push azure -f',
                     'git reset --hard HEAD^',
+                    'grunt clean:azure',
                     'echo "Finished deploying to Azure"'
                 ].join('&&')
             }
@@ -177,8 +178,7 @@ module.exports = function (grunt) {
             'browserify:azure',
             'compass:azure',
             'copy:azure',
-            'shell:azure',
-            'clean:azure'
+            'shell:azure'
         ]);
     });
 

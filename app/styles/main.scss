@@ -28,6 +28,12 @@ html, body, .wrapper{
   background-size: 1200px 100px;
   height: 100px;
   width: 100%;
+  text-align: center;
+  a.home-link{
+    display: inline-block;
+    height: 100px;
+    width: 1200px;
+  }
 }
 
 .serif{
