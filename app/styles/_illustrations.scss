@@ -45,6 +45,7 @@
         animation-timing-function: cubic-bezier(0.5, 0.2, 0.3, 1.0);
       }
       &.hide{
+        display: block;
         animation: hide-overlay 0.5s;
         animation-timing-function: cubic-bezier(0.5, 0.2, 0.3, 1.0);
       }
