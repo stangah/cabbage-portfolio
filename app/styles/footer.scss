@@ -1,0 +1,59 @@
+.footer{
+  background-color: rgb(241,176,77);
+  clear: both;
+  height: 80px;
+  margin-top: -80px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  .footer-links{
+    display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    height: 100%;
+    line-height: 80px;
+    margin: 0 auto;
+    max-width: 800px;
+    min-width: 600px;
+    padding: 0 10px;
+    div{
+      display: inline-block;
+      width: 90px;
+      i{
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        &.diamond{
+          background: url('../images/diamond.png') 0 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 15px 15px;
+        }
+        &.linkedin{
+          background: url('../images/linkedin.png') 0 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 15px 15px;
+        }
+        &.behance{
+          background: url('../images/behance.png') 0 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 15px 15px;
+        }
+        &.dribble{
+          background: url('../images/dribble.png') 0 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 15px 15px;
+        }
+      }
+      a{
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+      }
+    }
+  }
+}

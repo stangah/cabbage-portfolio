@@ -1,0 +1,36 @@
+.illustrations-view{
+  padding: 0 50px;
+
+  .thumbnail-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  img.thumbnail{
+    margin: 20px;
+    width: 300px;
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    height: 100px;
+    width: 100%;
+    a.explore{
+      display: block;
+      height: 55px;
+      width: 200px;
+      background: url('../images/explore_ux.png') 0 0;
+      background-repeat: no-repeat;
+      background-size: 200px;
+      &:hover{
+        background-position: 0 -56px;
+      }
+    }
+  }
+}

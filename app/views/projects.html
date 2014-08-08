@@ -1,0 +1,24 @@
+<div class="projects-view">
+
+  <div class="intro">
+    <div class="serif label">{{current.title}}</div>
+  </div>
+
+  <div class="content">
+    <div class="thumbnails-container">
+      <div ng-repeat="(id, project) in projects">
+        <a class="project-thumbnails" ng-class="project-{{id}}" ng-href="/#/projects/id"></a>
+      </div>
+    </div>
+
+    <div class="panes-container">
+      <div ng-repeat="pane in current.panes">
+        <div class="pane">
+          <img class="pane-image" ng-src="../images/{{pane.image}}">
+          <div class="pane-text">{{pane.text}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
