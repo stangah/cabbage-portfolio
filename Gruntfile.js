@@ -129,7 +129,7 @@ module.exports = function (grunt) {
             options: {
                 port: 9001,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -150,6 +150,16 @@ module.exports = function (grunt) {
                     }
                 }
             }
+        },
+        autoprefixer: {
+            dev: {
+                src: 'dist/css/main.css',
+                dest: 'dist/css/main-prefixed.css'
+            },
+            azure: {
+                src: 'azure/css/main.css',
+                dest: 'azure/css/main-prefixed.css'
+            }
         }
     });
 
@@ -163,11 +173,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     grunt.registerTask('build', function() {
         return grunt.task.run([
             'browserify:dev',
             'compass:dev',
+            'autoprefixer:dev',
             'copy:dev'
         ]);
     });
@@ -177,6 +189,7 @@ module.exports = function (grunt) {
             'clean:azure',
             'browserify:azure',
             'compass:azure',
+            'autoprefixer:azure',
             'copy:azure',
             'shell:azure'
         ]);

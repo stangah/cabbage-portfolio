@@ -1,7 +1,7 @@
-@import 'root.scss';
-@import 'footer.scss';
-@import 'illustrations.scss';
-@import 'projects.scss';
+@import 'root';
+@import 'footer';
+@import 'illustrations';
+@import 'projects';
 
 body{
   margin: 0;
@@ -12,13 +12,13 @@ body{
   font-family: 'Merriweather Sans', sans-serif;
 }
 
-html, body, .wrapper{
+html, body{
   height: 100%;
 }
 
 .main-container{
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 60px;;
 }
 
 .header{
