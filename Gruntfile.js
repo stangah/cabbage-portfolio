@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: ['app/styles/**/*.scss'],
-                tasks: ['compass:dev'],
+                tasks: ['compass:dev', 'autoprefixer:dev'],
                 options: {
                     livereload: true
                 }

@@ -12,13 +12,17 @@ body{
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+html{
+  overflow-y: scroll;
+}
+
 html, body{
   height: 100%;
 }
 
 .main-container{
   padding-top: 40px;
-  padding-bottom: 60px;;
+  padding-bottom: 60px;
 }
 
 .header{

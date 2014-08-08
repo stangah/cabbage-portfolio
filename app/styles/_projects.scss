@@ -8,7 +8,6 @@
   .content{
     display: flex;
     justify-content: space-around;
-    -webkit-justify-content: space-around;
     margin: 0 auto 50px auto;
     max-width: 1200px;
     min-width: 1050px;
@@ -33,7 +32,6 @@
 
   .panes-container{
     width: 1000px;
-    padding: 0;
     .pane{
       display: flex;
       height: 500px;
