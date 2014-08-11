@@ -1,6 +1,7 @@
 'use strict';
 
 var ProjectsController = function($scope, $stateParams) {
+  var $ = require('jquery');
   $scope.id = $stateParams.id || 19;
 
   $scope.thumbnailStyle = function(id) {
@@ -52,6 +53,12 @@ var ProjectsController = function($scope, $stateParams) {
       panes: []
     }
   };
+
+  var container = $(".thumbnails-container"), spacer = $(".thumbnails-spacer"), pos = container.offset();
+  $(window).scroll(function() {
+    if($(this).scrollTop() > (pos.top - 20) && container.css('position') == 'static') { container.addClass('fixed'); spacer.show(); }
+    else if($(this).scrollTop() <= (pos.top - 20) && container.hasClass('fixed')){ container.removeClass('fixed'); spacer.hide(); }
+  });
 
   $scope.current = $scope.projects[$scope.id];
 };

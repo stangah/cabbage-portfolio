@@ -13,10 +13,17 @@
     min-width: 1050px;
   }
 
-  .thumbnails-container{
+  .thumbnails-spacer{
+    display: none;
     height: 700px;
-    width: 100px;
+    width: 70px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .thumbnails-container{
     display: flex;
+    /*position: fixed;*/
     flex-direction: column;
     align-items: center;
     a.project-thumbnails{
