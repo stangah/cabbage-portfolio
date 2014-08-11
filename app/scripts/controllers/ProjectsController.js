@@ -1,9 +1,17 @@
 'use strict';
 
 var ProjectsController = function($scope, $stateParams) {
+  // Keeps position of thumbnails fixed when they reach top of window
   var $ = require('jquery');
-  $scope.id = $stateParams.id || 19;
+  var container = $('.thumbnails-container');
+  var spacer = $('.thumbnails-spacer');
+  var pos = container.offset();
+  $(window).scroll(function() {
+    if($(this).scrollTop() > (pos.top - 20) && container.css('position') === 'static') { container.addClass('fixed'); spacer.show(); }
+    else if($(this).scrollTop() <= (pos.top - 20) && container.hasClass('fixed')){ container.removeClass('fixed'); spacer.hide(); }
+  });
 
+  $scope.id = $stateParams.id || 19;
   $scope.thumbnailStyle = function(id) {
     return {
       'background': 'url("../images/icons-' + id + '.png") 0 0',
@@ -54,11 +62,6 @@ var ProjectsController = function($scope, $stateParams) {
     }
   };
 
-  var container = $(".thumbnails-container"), spacer = $(".thumbnails-spacer"), pos = container.offset();
-  $(window).scroll(function() {
-    if($(this).scrollTop() > (pos.top - 20) && container.css('position') == 'static') { container.addClass('fixed'); spacer.show(); }
-    else if($(this).scrollTop() <= (pos.top - 20) && container.hasClass('fixed')){ container.removeClass('fixed'); spacer.hide(); }
-  });
 
   $scope.current = $scope.projects[$scope.id];
 };
