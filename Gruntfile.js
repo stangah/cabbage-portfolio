@@ -121,6 +121,9 @@ module.exports = function (grunt) {
             },
             images: {
                 command: '[[ `ls app/images-pre` ]] && mv app/images-pre/* app/images-post/ || echo "No images to move"'
+            },
+            check: {
+                command: 'if [[ -n $(git status -s) ]]; then echo "Please commit your changes before you try deploying to azure" && exit 42; fi'
             }
         },
         connect: {
@@ -231,6 +234,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('azure', function() {
         return grunt.task.run([
+            'shell:check',
             'clean:azure',
             'build:azure',
             'shell:azure'
@@ -247,4 +251,5 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
+
 };
