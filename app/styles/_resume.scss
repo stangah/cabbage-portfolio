@@ -4,7 +4,7 @@
   margin-bottom: 120px;
 
   a{
-    color: #0c84a7;
+    color: #0071bc;
     font-size: 12px;
     font-weight: 300;
     text-decoration: none;
@@ -60,6 +60,12 @@
       width: 100%;
       div{
         height: 16px;
+        .dots{
+          height: 8px;
+          border-bottom-style: dotted;
+          border-bottom-color: black;
+          border-bottom-width: 2px;
+        }
       }
     }
     .left{
@@ -74,9 +80,6 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      border-bottom-style: dotted;
-      border-bottom-color: black;
-      border-bottom-width: 2px;
     }
   }
 

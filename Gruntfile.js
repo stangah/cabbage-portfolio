@@ -65,15 +65,8 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             },
-            html: {
-                files: ['app/views/**/*.html', 'app/index.html'],
-                tasks: ['copy:dev'],
-                options: {
-                    livereload: true
-                }
-            },
-            images: {
-                files: ['app/images/**/*'],
+            stuff: {
+                files: ['app/views/**/*.html', 'app/index.html', 'app/images/**/*'],
                 tasks: ['copy:dev'],
                 options: {
                     livereload: true
@@ -101,6 +94,7 @@ module.exports = function (grunt) {
             dev: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
+                    {expand: true, cwd: 'app', src: ['downloads/**'], dest: 'dist'},
                     {expand: true, cwd: 'app/images-min', src: ['**'], dest: 'dist/images'},
                     {expand: true, cwd: 'app', src: ['index.html'], dest: 'dist'}
                 ]
@@ -108,6 +102,7 @@ module.exports = function (grunt) {
             azure: {
                 files: [
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'azure'},
+                    {expand: true, cwd: 'app', src: ['downloads/**'], dest: 'azure'},
                     {expand: true, cwd: 'app/images-min', src: ['**'], dest: 'azure/images'},
                     {expand: true, cwd: 'app', src: ['index.html'], dest: 'azure'}
                 ]
