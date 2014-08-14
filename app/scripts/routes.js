@@ -20,6 +20,10 @@ var router = function($stateProvider, $urlRouterProvider) {
       url: '/projects/:id',
       controller: 'ProjectsController',
       templateUrl: '../views/projects.html'
+    })
+    .state('resume', {
+      url: '/resume',
+      templateUrl: '../views/resume.html'
     });
 };
 

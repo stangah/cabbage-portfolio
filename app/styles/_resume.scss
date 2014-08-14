@@ -1,0 +1,88 @@
+.resume-view{
+  width: 1050px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+
+  a{
+    color: #0c84a7;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    &:hover{
+      color: #fbb03b;
+      cursor: pointer;
+    }
+  }
+
+  .header-container{
+    div{
+      display: inline-block;
+    }
+    .name{
+      font-size: 26px;
+      font-weight: bold;
+      color: #bc5d2e;
+      margin-right: 10px;
+    }
+    .pron{
+      font-size: 12px;
+      .phon{
+        font-style: italic;
+      }
+    }
+  }
+
+  .content{
+    padding-top: 20px;
+    height: 400px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 25px;
+    column-span: 1;
+    column-count: 2;
+    column-gap: 20px;
+    p{
+      margin: 0;
+    }
+    ul{
+      padding-left: 16px;
+      margin-bottom: 20px;
+      li{
+        margin-bottom: 5px;
+      }
+    }
+    .section-header{
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .dot-container{
+      width: 100%;
+      div{
+        height: 16px;
+      }
+    }
+    .left{
+      float: left;
+      margin-right: 5px;
+    }
+    .right{
+      float: right;
+      margin-left: 5px;
+    }
+    .dotted{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      border-bottom-style: dotted;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+    }
+  }
+
+  .pdf{
+    a{
+      float: right;
+    }
+  }
+}
