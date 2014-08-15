@@ -13,10 +13,22 @@
       cursor: pointer;
     }
   }
+  p{
+    margin: 0;
+  }
+  ul{
+    padding-left: 16px;
+    margin-bottom: 20px;
+    li{
+      margin-bottom: 5px;
+    }
+  }
 
   .header-container{
     width: 400px;
+    height: 30px;
     display: inline-block;
+    margin-bottom: 20px;
     div{
       display: inline-block;
     }
@@ -36,64 +48,53 @@
 
   .content{
     padding-top: 20px;
-    min-height: 400px;
+    min-height: 500px;
     font-size: 12px;
     font-weight: 300;
     line-height: 22px;
     margin: 0 auto;
     margin-bottom: 25px;
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    p{
-      margin: 0;
-    }
-    ul{
-      padding-left: 16px;
-      margin-bottom: 20px;
-      li{
-        margin-bottom: 5px;
-      }
-    }
     .col{
-      height: 400px;
+      height: 450px;
       width: 500px;
-    }
-    .section-header{
-      font-size: 18px;
-      font-weight: 400;
-    }
-    .dot-container{
-      width: 100%;
-      div{
-        height: 16px;
-        .dots{
-          height: 8px;
-          border-bottom-style: dotted;
-          border-bottom-color: black;
-          border-bottom-width: 2px;
+      .section-header{
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .dot-container{
+        width: 100%;
+        >div{
+          height: 16px;
+        }
+        .left{
+          float: left;
+          margin-right: 5px;
+        }
+        .right{
+          float: right;
+          margin-left: 5px;
+        }
+        .dotted{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          .dots{
+            height: 8px;
+            border-bottom-style: dotted;
+            border-bottom-color: black;
+            border-bottom-width: 2px;
+          }
         }
       }
     }
-    .left{
-      float: left;
-      margin-right: 5px;
-    }
-    .right{
-      float: right;
-      margin-left: 5px;
-    }
-    .dotted{
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
-
-  .pdf{
-    width: 200px;
-    a{
-      float: right;
+    .col2{
+      align-self: flex-end;
+      .pdf{
+        float: right;
+      }
     }
   }
 }
