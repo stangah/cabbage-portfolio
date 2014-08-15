@@ -7,7 +7,7 @@
   <div class="content">
     <div class="thumbnails-container">
       <div ng-repeat="(id, project) in projects">
-        <a class="project-thumbnails" ng-style="thumbnailStyle(id)" ng-class="project-{{id}}" ng-href="/#/projects/{{id}}"></a>
+        <a class="project-thumbnails" ng-style="thumbnailStyle(id)" ng-class="{'clicked': currentId === id}" ng-class="project-{{id}}" ng-href="/#/projects/{{id}}"></a>
       </div>
     </div>
 

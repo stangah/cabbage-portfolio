@@ -11,7 +11,7 @@ var ProjectsController = function($scope, $stateParams) {
     else if($(this).scrollTop() <= (pos.top - 20) && container.hasClass('fixed')){ container.removeClass('fixed'); spacer.hide(); }
   });
 
-  $scope.id = $stateParams.id || 19;
+  $scope.currentId = $stateParams.id || 19;
   $scope.thumbnailStyle = function(id) {
     return {
       'background': 'url("../images/icons-' + id + '.png") 0 0',
@@ -63,7 +63,7 @@ var ProjectsController = function($scope, $stateParams) {
   };
 
 
-  $scope.current = $scope.projects[$scope.id];
+  $scope.current = $scope.projects[$scope.currentId];
 };
 
 module.exports = ProjectsController;
