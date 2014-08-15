@@ -48,7 +48,7 @@
 
   .content{
     padding-top: 20px;
-    min-height: 500px;
+    min-height: 520px;
     font-size: 12px;
     font-weight: 300;
     line-height: 22px;
@@ -58,7 +58,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     .col{
-      height: 450px;
+      height: 470px;
       width: 500px;
       .section-header{
         font-size: 18px;
@@ -93,6 +93,7 @@
     .col2{
       align-self: flex-end;
       .pdf{
+        margin-top: 20px;
         float: right;
       }
     }
