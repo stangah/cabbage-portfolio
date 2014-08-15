@@ -1,5 +1,5 @@
 .resume-view{
-  width: 1050px;
+  max-width: 1050px;
   margin: 0 auto;
   margin-bottom: 120px;
 
@@ -15,6 +15,8 @@
   }
 
   .header-container{
+    width: 400px;
+    display: inline-block;
     div{
       display: inline-block;
     }
@@ -34,14 +36,15 @@
 
   .content{
     padding-top: 20px;
-    height: 400px;
+    min-height: 400px;
     font-size: 12px;
     font-weight: 300;
     line-height: 22px;
+    margin: 0 auto;
     margin-bottom: 25px;
-    column-span: 1;
-    column-count: 2;
-    column-gap: 20px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
     p{
       margin: 0;
     }
@@ -51,6 +54,10 @@
       li{
         margin-bottom: 5px;
       }
+    }
+    .col{
+      height: 400px;
+      width: 500px;
     }
     .section-header{
       font-size: 18px;
@@ -84,6 +91,7 @@
   }
 
   .pdf{
+    width: 200px;
     a{
       float: right;
     }
