@@ -96,7 +96,8 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'dist'},
                     {expand: true, cwd: 'app', src: ['downloads/**'], dest: 'dist'},
                     {expand: true, cwd: 'app/images-min', src: ['**'], dest: 'dist/images'},
-                    {expand: true, cwd: 'app', src: ['index.html'], dest: 'dist'}
+                    {expand: true, cwd: 'app', src: ['index.html'], dest: 'dist'},
+                    {expand: true, cwd: 'app', src: ['favicon.ico'], dest: 'dist'}
                 ]
             },
             azure: {
@@ -104,7 +105,8 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'app', src: ['views/**'], dest: 'azure'},
                     {expand: true, cwd: 'app', src: ['downloads/**'], dest: 'azure'},
                     {expand: true, cwd: 'app/images-min', src: ['**'], dest: 'azure/images'},
-                    {expand: true, cwd: 'app', src: ['index.html'], dest: 'azure'}
+                    {expand: true, cwd: 'app', src: ['index.html'], dest: 'azure'},
+                    {expand: true, cwd: 'app', src: ['favicon.ico'], dest: 'azure'}
                 ]
             }
         },
