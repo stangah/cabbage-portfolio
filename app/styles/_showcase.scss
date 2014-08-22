@@ -63,11 +63,18 @@
       display: block;
       height: 55px;
       width: 200px;
-      background: url('../images/explore_ux.png') 0 0;
-      background-repeat: no-repeat;
-      background-size: 200px;
+      &.uxui{
+        background: url('../images/explore_ux.png') 0 0;
+        background-repeat: no-repeat;
+        background-size: 200px;
+      }
+      &.illustrations{
+        background: url('../images/explore_illustrations.png') 0 0;
+        background-repeat: no-repeat;
+        background-size: 200px;
+      }
       &:hover{
-        background-position: 0 -56px;
+        background-position: 0 -56px !important;
       }
     }
   }

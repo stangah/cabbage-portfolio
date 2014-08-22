@@ -14,7 +14,12 @@ var router = function($stateProvider, $urlRouterProvider) {
     .state('illustrations', {
       url: '/illustrations',
       controller: 'IllustrationsController',
-      templateUrl: '../views/illustrations.html'
+      templateUrl: '../views/showcase.html'
+    })
+    .state('uxui', {
+      url: '/uxui',
+      controller: 'UXUIController',
+      templateUrl: '../views/showcase.html'
     })
     .state('projects', {
       url: '/projects/:id',

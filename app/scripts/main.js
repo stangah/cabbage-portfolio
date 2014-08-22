@@ -4,6 +4,7 @@ var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 
 var IllustrationsController = require('./controllers/IllustrationsController');
+var UXUIController = require('./controllers/UXUIController');
 var ProjectsController = require('./controllers/ProjectsController');
 var LinkFooterDirective = require('./directives/LinkFooterDirective');
 var HeaderLogoDirective = require('./directives/HeaderLogoDirective');
@@ -13,6 +14,7 @@ var app = angular.module('myApp', ['ui.router']);
 
 
 app.controller('IllustrationsController', ['$scope', IllustrationsController]);
+app.controller('UXUIController', ['$scope', UXUIController]);
 app.controller('ProjectsController', ['$scope', '$stateParams', ProjectsController]);
 app.directive('linkFooter', LinkFooterDirective);
 app.directive('headerLogo', HeaderLogoDirective);

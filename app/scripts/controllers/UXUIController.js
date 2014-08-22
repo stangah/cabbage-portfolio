@@ -1,6 +1,6 @@
 'use strict';
 
-var IllustrationsController = function($scope) {
+var ShowcaseController = function($scope) {
   $scope.illustrations = [
     'placeholder-26.png',
     'placeholder-26.png',
@@ -10,8 +10,8 @@ var IllustrationsController = function($scope) {
     'placeholder-26.png'
   ];
 
-  $scope.buttonLink = '/#/uxui';
-  $scope.buttonClass = 'uxui';
+  $scope.buttonLink = '/#/illustrations';
+  $scope.buttonClass = 'illustrations';
 };
 
-module.exports = IllustrationsController;
+module.exports = ShowcaseController;
