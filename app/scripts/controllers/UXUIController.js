@@ -10,6 +10,8 @@ var ShowcaseController = function($scope) {
     'placeholder-26.png'
   ];
 
+  $scope.title = "UX & UI";
+
   $scope.buttonLink = '/#/illustrations';
   $scope.buttonClass = 'illustrations';
 };
