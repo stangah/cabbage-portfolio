@@ -22,16 +22,16 @@
       min-width: 600px;
       div.ux{
         a{
-          background: url('../images/home_icon-07.png') 0 0;
+          background: url('../images/home_ux.png') 0 0;
           background-repeat: no-repeat;
-          background-size: 301px;
+          background-size: 300px 600px;
         }
       }
       div.illustrations{
         a{
-          background: url('../images/home_icon-08.png') 0 0;
+          background: url('../images/home_il.png') 0 0;
           background-repeat: no-repeat;
-          background-size: 301px;
+          background-size: 300px 600px;
           &:hover{
             background-position: 0 -300px;
           }

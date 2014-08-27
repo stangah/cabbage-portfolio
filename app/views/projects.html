@@ -7,7 +7,7 @@
   <div class="content">
     <div class="thumbnails-container">
       <div ng-repeat="(id, project) in projects">
-        <a class="project-thumbnails" ng-style="thumbnailStyle(id)" ng-class="{'clicked': currentId === id}" ng-class="project-{{id}}" ng-href="/#/projects/{{id}}"></a>
+        <a class="project-thumbnails" ng-style="thumbnailStyle(id)" ng-class="{'clicked': currentId === id}" ng-class="project-{{id}}" ng-href="/#/{{label}}/projects/{{id}}"></a>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
     <div class="panes-container">
       <div ng-repeat="pane in current.panes">
         <div class="pane">
-          <img class="pane-image" ng-src="../images/{{pane.image}}">
+          <div class="pane-image"><img ng-src="../images/{{pane.image}}"></div>
           <div class="pane-text">{{pane.text}}</div>
         </div>
       </div>

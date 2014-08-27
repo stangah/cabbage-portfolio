@@ -16,15 +16,26 @@ var router = function($stateProvider, $urlRouterProvider) {
       controller: 'IllustrationsController',
       templateUrl: '../views/showcase.html'
     })
+    .state('illustrationsProjects', {
+      url: '/illustrations/projects/:id',
+      controller: 'ProjectsController',
+      templateUrl: '../views/projects.html',
+      resolve: {
+        projectsProvider: 'IllustrationsProjects'
+      }
+    })
     .state('uxui', {
       url: '/uxui',
       controller: 'UXUIController',
       templateUrl: '../views/showcase.html'
     })
-    .state('projects', {
-      url: '/projects/:id',
+    .state('uxuiProjects', {
+      url: '/uxui/projects/:id',
       controller: 'ProjectsController',
-      templateUrl: '../views/projects.html'
+      templateUrl: '../views/projects.html',
+      resolve: {
+        projectsProvider: 'UXUIProjects'
+      }
     })
     .state('resume', {
       url: '/resume',
