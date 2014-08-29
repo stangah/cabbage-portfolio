@@ -4,8 +4,29 @@ var IllustrationsProjects = {
   label: 'illustrations',
   panes: {
     '01': {
-      title: 'Old person',
-      panes: []
+      title: 'Boats of Seattle',
+      panes: [
+        {
+          image: 'boat-proj-01.png',
+          text: ''
+        },
+        {
+          image: 'boat-proj-02.png',
+          text: ''
+        },
+        {
+          image: 'boat-proj-03.png',
+          text: ''
+        },
+        {
+          image: 'boat-proj-04.png',
+          text: ''
+        },
+        {
+          image: 'boat-proj-05.png',
+          text: ''
+        },
+      ]
     },
 
     '02': {
