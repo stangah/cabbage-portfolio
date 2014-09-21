@@ -11,15 +11,15 @@ var IllustrationsProjects = {
           text: ''
         },
         {
-          image: 'boat-proj-02.png',
+          image: 'boat-proj-02.gif',
           text: ''
         },
         {
-          image: 'boat-proj-03.png',
+          image: 'boat-proj-03.gif',
           text: ''
         },
         {
-          image: 'boat-proj-04.png',
+          image: 'boat-proj-04.gif',
           text: ''
         },
         {
@@ -30,24 +30,49 @@ var IllustrationsProjects = {
     },
 
     '02': {
-      title: 'Cardboard letters',
-      panes: []
+      title: 'Invitations',
+      panes: [
+        {
+          image: 'invites-proj-01.jpg',
+          text: ''
+        },
+        {
+          image: 'invites-proj-02.jpg',
+          text: ''
+        },
+        {
+          image: 'invites-proj-03.jpg',
+          text: ''
+        },
+        {
+          image: 'invites-proj-04.jpg',
+          text: ''
+        }
+      ]
     },
 
     '03': {
       title: 'Kattish',
       panes: [
         {
-          image: 'kattish-01.png',
+          image: 'kattish-01.jpg',
           text: 'This project was inspired by Pokemon because they are very cute and magical. The instructor of this Poke project was Brett Macfadden of Macfadden and Thorpe. It had the honor to be featured in Elle magazine as a tribute to the recent Poke master\'s death. The incident was such morbid.'
         },
         {
-          image: 'kattish-02.png',
+          image: 'kattish-02.jpg',
           text: 'Little text like this can explain each image within the project. For example, "This is an early exploration that led to xoxoxo."'
         },
         {
-          image: 'kattish-03.png',
+          image: 'kattish-03.gif',
           text: 'Little text like this can explain each image within the project. For example, "This is an early exploration that led to xoxoxo."'
+        },
+        {
+          image: 'kattish-04.jpg',
+          text: ''
+        },
+        {
+          image: 'kattish-05.gif',
+          text: ''
         }
       ]
     },
