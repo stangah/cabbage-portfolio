@@ -13,28 +13,34 @@ var router = function($stateProvider, $urlRouterProvider) {
     })
     .state('illustrations', {
       url: '/illustrations',
-      controller: 'IllustrationsController',
-      templateUrl: '../views/showcase.html'
+      controller: 'ShowcaseController',
+      templateUrl: '../views/showcase.html',
+      resolve: {
+        dataProvider: 'IllustrationsData'
+      }
     })
     .state('illustrationsProjects', {
       url: '/illustrations/projects/:id',
       controller: 'ProjectsController',
       templateUrl: '../views/projects.html',
       resolve: {
-        projectsProvider: 'IllustrationsProjects'
+        dataProvider: 'IllustrationsData'
       }
     })
     .state('uxui', {
       url: '/uxui',
-      controller: 'UXUIController',
-      templateUrl: '../views/showcase.html'
+      controller: 'ShowcaseController',
+      templateUrl: '../views/showcase.html',
+      resolve: {
+        dataProvider: 'UXUIData'
+      }
     })
     .state('uxuiProjects', {
       url: '/uxui/projects/:id',
       controller: 'ProjectsController',
       templateUrl: '../views/projects.html',
       resolve: {
-        projectsProvider: 'UXUIProjects'
+        dataProvider: 'UXUIData'
       }
     })
     .state('resume', {

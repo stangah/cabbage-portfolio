@@ -1,5 +1,26 @@
 'use strict';
 
+var IllustrationsShowcase = {
+  projects: [
+    {id: '01', image: 'icon-illustrations-01.png'},
+    {id: '02', image: 'icon-illustrations-02.png'},
+    {id: '03', image: 'icon-illustrations-03.png'},
+    {id: '04', image: 'placeholder-26.png'},
+    {id: '05', image: 'placeholder-26.png'},
+    {id: '06', image: 'placeholder-26.png'}
+  ],
+
+  title: 'Illustrations',
+
+  section: 'illustrations',
+
+  buttonLink: '/#/uxui',
+
+  buttonClass: 'uxui'
+
+};
+exports.showcase = IllustrationsShowcase;
+
 var IllustrationsProjects = {
   label: 'illustrations',
   panes: {
@@ -90,5 +111,4 @@ var IllustrationsProjects = {
     }
   }
 };
-
-module.exports = IllustrationsProjects;
+exports.projects = IllustrationsProjects;

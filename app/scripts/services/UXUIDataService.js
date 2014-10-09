@@ -1,5 +1,26 @@
 'use strict';
 
+var UXUIShowcase = {
+  projects: [
+    {id: '01', image: 'icon-uxui-01.gif'},
+    {id: '02', image: 'icon-uxui-02.png'},
+    {id: '03', image: 'placeholder-26.png'},
+    {id: '04', image: 'placeholder-26.png'},
+    {id: '05', image: 'placeholder-26.png'},
+    {id: '06', image: 'placeholder-26.png'}
+  ],
+
+  title: 'UX & UI',
+
+  section: 'uxui',
+
+  buttonLink: '/#/illustrations',
+
+  buttonClass: 'illustrations'
+
+};
+exports.showcase = UXUIShowcase;
+
 var UXUIProjects = {
 
   label: 'uxui',
@@ -81,5 +102,4 @@ var UXUIProjects = {
   }
 
 };
-
-module.exports = UXUIProjects;
+exports.projects = UXUIProjects;

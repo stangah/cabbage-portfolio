@@ -1,8 +1,8 @@
 'use strict';
 
-var dependencies = ['$scope', '$stateParams', 'projectsProvider'];
+var dependencies = ['$scope', '$stateParams', 'dataProvider'];
 
-var ProjectsController = function($scope, $stateParams, projectsProvider) {
+var ProjectsController = function($scope, $stateParams, dataProvider) {
   // Keeps position of thumbnails fixed when they reach top of window
   var $ = require('jquery');
   var container = $('.thumbnails-container');
@@ -22,9 +22,9 @@ var ProjectsController = function($scope, $stateParams, projectsProvider) {
     };
   };
 
-  $scope.projects = projectsProvider.panes;
+  $scope.projects = dataProvider.projects.panes;
 
-  $scope.label = projectsProvider.label;
+  $scope.label = dataProvider.projects.label;
 
   $scope.current = $scope.projects[$scope.currentId];
 };

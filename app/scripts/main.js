@@ -3,12 +3,10 @@
 var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 
-var IllustrationsController = require('./controllers/IllustrationsController');
-var IllustrationsProjectsService = require('./services/IllustrationsProjectsService');
+var IllustrationsDataService = require('./services/IllustrationsDataService');
+var UXUIDataService = require('./services/UXUIDataService');
 
-var UXUIController = require('./controllers/UXUIController');
-var UXUIProjectsService = require('./services/UXUIProjectsService');
-
+var ShowcaseController = require('./controllers/ShowcaseController');
 var ProjectsController = require('./controllers/ProjectsController');
 var LinkFooterDirective = require('./directives/LinkFooterDirective');
 var HeaderLogoDirective = require('./directives/HeaderLogoDirective');
@@ -17,12 +15,10 @@ var routes = require('./routes');
 var app = angular.module('myApp', ['ui.router']);
 
 
-app.controller('IllustrationsController', IllustrationsController);
-app.constant('IllustrationsProjects', IllustrationsProjectsService);
+app.constant('IllustrationsData', IllustrationsDataService);
+app.constant('UXUIData', UXUIDataService);
 
-app.controller('UXUIController', UXUIController);
-app.constant('UXUIProjects', UXUIProjectsService);
-
+app.controller('ShowcaseController', ShowcaseController);
 app.controller('ProjectsController', ProjectsController);
 app.directive('linkFooter', LinkFooterDirective);
 app.directive('headerLogo', HeaderLogoDirective);
