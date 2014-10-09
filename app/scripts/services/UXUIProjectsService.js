@@ -34,8 +34,33 @@ var UXUIProjects = {
       ]
     },
     '02': {
-      title: '',
-      panes: []
+      title: 'Ohey!',
+      panes: [
+        {
+          image: 'ohey-01.png',
+          text: ''
+        },
+        {
+          image: 'ohey-02.jpg',
+          text: ''
+        },
+        {
+          image: 'ohey-03.gif',
+          text: ''
+        },
+        {
+          image: 'ohey-04.png',
+          text: ''
+        },
+        {
+          image: 'ohey-05.png',
+          text: ''
+        },
+        {
+          image: 'ohey-06.png',
+          text: ''
+        }
+      ]
     },
     '03': {
       title: '',
