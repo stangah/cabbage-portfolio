@@ -4,9 +4,9 @@ var UXUIShowcase = {
   projects: [
     {id: '01', image: 'icon-uxui-01.gif'},
     {id: '02', image: 'icon-uxui-02.png'},
-    {id: '03', image: 'placeholder-26.png'},
-    {id: '04', image: 'placeholder-26.png'},
-    {id: '05', image: 'placeholder-26.png'},
+    {id: '03', image: 'icon-uxui-03.png'},
+    {id: '04', image: 'icon-uxui-04.png'},
+    {id: '05', image: 'icon-uxui-05.png'},
     {id: '06', image: 'placeholder-26.png'}
   ],
 
@@ -84,16 +84,111 @@ var UXUIProjects = {
       ]
     },
     '03': {
-      title: '',
-      panes: []
+      title: 'Skyfad',
+      panes: [
+        {
+          image: 'skyfad-01.jpg',
+          text: ''
+        },
+        {
+          image: 'skyfad-01.jpg',
+          text: ''
+        }
+      ]
     },
     '04': {
-      title: '',
-      panes: []
+      title: 'Pipelines',
+      panes: [
+        {
+          image: 'pipelines-01.gif',
+          text: ''
+        },
+        {
+          image: 'pipelines-02.png',
+          text: ''
+        },
+        {
+          image: 'pipelines-03.png',
+          text: ''
+        },
+        {
+          image: 'pipelines-04.png',
+          text: ''
+        },
+        {
+          image: 'pipelines-05.png',
+          text: ''
+        },
+        {
+          image: 'pipelines-06.png',
+          text: ''
+        },
+        {
+          image: 'pipelines-07.png',
+          text: ''
+        }
+      ]
     },
     '05': {
-      title: '',
-      panes: []
+      title: 'No Need',
+      panes: [
+        {
+          image: 'noneed-01.png',
+          text: ''
+        },
+        {
+          image: 'noneed-02.png',
+          text: ''
+        },
+        {
+          image: 'noneed-03.png',
+          text: ''
+        },
+        {
+          image: 'noneed-04.png',
+          text: ''
+        },
+        {
+          image: 'noneed-05.png',
+          text: ''
+        },
+        {
+          image: 'noneed-06.png',
+          text: ''
+        },
+        {
+          image: 'noneed-07.png',
+          text: ''
+        },
+        {
+          image: 'noneed-08.png',
+          text: ''
+        },
+        {
+          image: 'noneed-09.png',
+          text: ''
+        },
+        {
+          image: 'noneed-10.png',
+          text: ''
+        },
+        {
+          image: 'noneed-11.png',
+          text: ''
+        },
+        {
+          image: 'noneed-12.png',
+          text: ''
+        },
+        {
+          image: 'noneed-13.png',
+          text: ''
+        },
+        {
+          image: 'noneed-14.png',
+          text: ''
+        }
+      ]
     },
     '06': {
       title: '',
