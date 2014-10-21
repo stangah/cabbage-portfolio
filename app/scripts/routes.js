@@ -46,6 +46,10 @@ var router = function($stateProvider, $urlRouterProvider) {
     .state('resume', {
       url: '/resume',
       templateUrl: '../views/resume.html'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: '../views/about.html'
     });
 };
 
