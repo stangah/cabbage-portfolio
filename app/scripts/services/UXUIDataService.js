@@ -181,11 +181,11 @@ var UXUIProjects = {
           text: ''
         },
         {
-          image: 'noneed-13.png',
+          image: 'noneed-13.jpg',
           text: ''
         },
         {
-          image: 'noneed-14.png',
+          image: 'noneed-14.jpg',
           text: ''
         }
       ]
