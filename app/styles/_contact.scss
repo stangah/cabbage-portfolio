@@ -1,0 +1,42 @@
+$jia-orange: rgb(241,176,77);
+$link-blue: #0071bc;
+$text-grey: #888;
+
+.contact-view{
+  .content{
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    >div{
+      width: 50%;
+    }
+    .reach{
+      width: 500px;
+      margin-bottom: 50px;
+      input{
+        width: 488px;
+        height: 35px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid $jia-orange;
+        font-size: 15px;
+        &.msg{
+          height: 300px;
+        }
+      }
+      .submit{
+        float: right;
+        height: 50px;
+        width: 120px;
+        background: url('../images/submit.png') 0 0;
+        background-repeat: no-repeat;
+        background-size: 120px 100px;
+        &:hover{
+          background-position: 0 -50px;
+        }
+      }
+    }
+  }
+
+}
