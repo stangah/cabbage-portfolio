@@ -17,7 +17,7 @@
       <div ng-repeat="pane in current.panes">
         <div class="pane">
           <div class="pane-image"><img ng-src="../images/{{pane.image}}"></div>
-          <div class="pane-text">{{pane.text}}</div>
+          <div class="pane-text" ng-bind-html="pane.text"></div>
         </div>
       </div>
     </div>

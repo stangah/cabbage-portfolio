@@ -1,5 +1,9 @@
+$jia-orange: rgb(241,176,77);
+$link-blue: #0071bc;
+$text-grey: #888;
+
 .footer{
-  background-color: rgb(241,176,77);
+  background-color: $jia-orange;
   clear: both;
   height: 80px;
   margin-top: -80px;

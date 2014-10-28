@@ -9,8 +9,8 @@
       <a ng-href="/#/{{section}}/projects/{{project.id}}">
         <img class="image" ng-src="../images/{{project.image}}">
         <div class="overlay" ng-class="{'show': showOverlay === true, 'hide': showOverlay === false}">
-          <div class="title serif">Fun Project Title</div>
-          <div class="body">Little text like this can explain each image within the project. For example, "This is an early exploration that led to xoxoxo."</div>
+          <div class="title serif">{{project.title}}</div>
+          <div class="body">{{project.text}}</div>
         </div>
       </a>
     </div>

@@ -1,15 +1,19 @@
+$jia-orange: rgb(241,176,77);
+$link-blue: #0071bc;
+$text-grey: #888;
+
 .resume-view{
   max-width: 1050px;
   margin: 0 auto;
   margin-bottom: 120px;
 
   a{
-    color: #0071bc;
+    color: $link-blue;
     font-size: 12px;
     font-weight: 300;
     text-decoration: none;
     &:hover{
-      color: #fbb03b;
+      color: $jia-orange;
       cursor: pointer;
     }
   }

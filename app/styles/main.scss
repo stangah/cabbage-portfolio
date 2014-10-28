@@ -5,6 +5,10 @@
 @import 'resume';
 @import 'about';
 
+$jia-orange: rgb(241,176,77);
+$link-blue: #0071bc;
+$text-grey: #888;
+
 body{
   margin: 0;
   .wrapper{
@@ -55,7 +59,7 @@ html, body{
 }
 
 .label{
-  color: #888;
+  color: $text-grey;
   font-size: 20px;
   margin-bottom: 10px;
   text-align: center;

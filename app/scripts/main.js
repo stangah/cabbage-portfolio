@@ -2,6 +2,7 @@
 
 var angular = require('angular');
 var uiRouter = require('angular-ui-router');
+var sanitize = require('angular-sanitize');
 
 var IllustrationsDataService = require('./services/IllustrationsDataService');
 var UXUIDataService = require('./services/UXUIDataService');
@@ -12,7 +13,7 @@ var LinkFooterDirective = require('./directives/LinkFooterDirective');
 var HeaderLogoDirective = require('./directives/HeaderLogoDirective');
 var routes = require('./routes');
 
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'ngSanitize']);
 
 
 app.constant('IllustrationsData', IllustrationsDataService);

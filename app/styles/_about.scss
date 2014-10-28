@@ -1,6 +1,10 @@
+$jia-orange: rgb(241,176,77);
+$link-blue: #0071bc;
+$text-grey: #888;
+
 .content{
   margin: 80px auto 150px auto;
-  width: 900px;
+  width: 1000px;
 
   .moment{
     display: flex;
@@ -9,12 +13,12 @@
     // margin-bottom: 80px;
     margin-top: 0;
     img{
-      height: 300px;
+      height: 400px;
       margin-right: 50px;
     }
     .caption{
       width: 250px;
-      color: #888;
+      color: $text-grey;
       font-size: 16px;
       &.white{
         color: white;
@@ -40,7 +44,7 @@
     position: relative;
     width: 10px;
     height: 600px;
-    background-color: rgb(241,176,77);
+    background-color: $jia-orange;
     z-index: -10;
   }
 

@@ -1,3 +1,7 @@
+$jia-orange: rgb(241,176,77);
+$link-blue: #0071bc;
+$text-grey: #888;
+
 .projects-view{
   padding: 0 20px;
 
@@ -55,10 +59,20 @@
       }
     }
     .pane-text{
-      color: #888;
+      color: $text-grey;
       font-size: 16px;
       margin-left: 15px;
       width: 295px;
+      a{
+        color: $link-blue;
+        // font-size: 12px;
+        // font-weight: 300;
+        text-decoration: none;
+        &:hover{
+          color: $jia-orange;
+          cursor: pointer;
+        }
+      }
     }
   }
 

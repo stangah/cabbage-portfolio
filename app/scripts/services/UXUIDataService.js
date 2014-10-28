@@ -2,12 +2,42 @@
 
 var UXUIShowcase = {
   projects: [
-    {id: '01', image: 'icon-uxui-01.gif'},
-    {id: '02', image: 'icon-uxui-02.png'},
-    {id: '03', image: 'icon-uxui-03.png'},
-    {id: '04', image: 'icon-uxui-04.png'},
-    {id: '05', image: 'icon-uxui-05.png'},
-    {id: '06', image: 'placeholder-26.png'}
+    {
+      id: '01',
+      image: 'icon-uxui-01.gif',
+      title: 'Google Developer’s Console',
+      text: 'Geometrically designed icons that represent functions of the Developer’s Console, including Diff, Outline, Debug, History, and Work.'
+    },
+    {
+      id: '02',
+      image: 'icon-uxui-02.png',
+      title: 'Ohey Messaging App',
+      text: 'By combining facial recognition and GPS tracking, Ohey allows you to message people in your physical proximity.'
+    },
+    {
+      id: '03',
+      image: 'icon-uxui-03.png',
+      title: 'Skyfad',
+      text: 'A Taiwanese-based mobile app that connects consumers with local boutiques.'
+    },
+    {
+      id: '04',
+      image: 'icon-uxui-04.png',
+      title: 'Google Cloud Pipelines',
+      text: 'The redesigning of pipelines allowed developers to easily track their code through stages Dev, Test, and Prod.'
+    },
+    {
+      id: '05',
+      image: 'icon-uxui-05.png',
+      title: 'NoNeed Drug Information App',
+      text: 'NoNeed is a mobile app aiming to educate youth about the real consequences of drug usage, as well as provide a platform for those seeking help.'
+    },
+    {
+      id: '06',
+      image: 'placeholder-26.png',
+      title: 'Fun Project Title',
+      text: 'Something something'
+    }
   ],
 
   title: 'UX & UI',
@@ -59,27 +89,27 @@ var UXUIProjects = {
       panes: [
         {
           image: 'ohey-01.png',
-          text: ''
+          text: 'Ohey is a mobile app that embraces the anti-socialness of young people today. This was a project for <a href="http://www.myintdesign.com/" target="_blank">Karin Myint’s</a> Typography class.'
         },
         {
           image: 'ohey-02.jpg',
-          text: ''
+          text: 'The site map features messaging, camera and map views, and basic account access.'
         },
         {
           image: 'ohey-03.gif',
-          text: ''
+          text: 'The loading pages in a simple, elegant animation of the conceptual text that this assignment was based on.'
         },
         {
           image: 'ohey-04.png',
-          text: ''
+          text: 'Ohey allows you to message people in your physical proximity.'
         },
         {
           image: 'ohey-05.png',
-          text: ''
+          text: 'The user can also customize the perimeter you want to be visible in. This is useful if the user is concerned about his/her privacy and wants to avoid any possibility of someone utilizing this app to track them down.'
         },
         {
           image: 'ohey-06.png',
-          text: ''
+          text: 'By combining facial recognition and GPS tracking, Ohey will be able to display other users in your physical proximity.'
         }
       ]
     },
@@ -88,11 +118,11 @@ var UXUIProjects = {
       panes: [
         {
           image: 'skyfad-01.jpg',
-          text: ''
+          text: 'As services such as Yelp currently seize to exist in Asia, Skyfad was an effort to give local boutiques hidden in small alleys a platform to connect with their users.'
         },
         {
-          image: 'skyfad-01.jpg',
-          text: ''
+          image: 'skyfad-02.jpg',
+          text: 'This is the second visual direction explored for Skyfad.'
         }
       ]
     },
@@ -101,31 +131,31 @@ var UXUIProjects = {
       panes: [
         {
           image: 'pipelines-01.gif',
-          text: ''
+          text: 'These are a few iterations we explored for the general formatting of Pipelines. We needed the different stages to be chronological, but all connected. Some of these explorations even include two sets of Pipelines (Pipeline One / Pipeline Two) but in the end looked overly complex.'
         },
         {
           image: 'pipelines-02.png',
-          text: ''
+          text: 'The original design featured a simple list style as well as radio buttons to access settings, cancel, retry, and promote. My goal was to improve the hierarchy of the list and the usability of the actions.'
         },
         {
           image: 'pipelines-03.png',
-          text: ''
+          text: 'The result was a flat card style that spoke to Material Design, as well as directly implemented action buttons. However, according to a user-testing conducted by our researcher, the upward facing arrows were chronologically confusing.'
         },
         {
           image: 'pipelines-04.png',
-          text: ''
+          text: 'To fix this, I changed the reading direction of the contents to a more expected top-to-bottom. This page was featured in the Google IO 2014.'
         },
         {
           image: 'pipelines-05.png',
-          text: ''
+          text: 'I also created an introductory info-graphic for the Getting Started page for new Pipeline users.'
         },
         {
           image: 'pipelines-06.png',
-          text: ''
+          text: 'The Pipelines Tasks page was redesigned as well to balance hierarchy, aesthetics, and information density.'
         },
         {
           image: 'pipelines-07.png',
-          text: ''
+          text: 'The Pipelines History page was cleaned up as well. I simplified the distracting horizontal lines and improved information density, which also improved the page’s overall scanability.'
         }
       ]
     },
@@ -134,11 +164,11 @@ var UXUIProjects = {
       panes: [
         {
           image: 'noneed-01.png',
-          text: ''
+          text: 'NoNeed is a mobile app concepts that aims to educate youth about drug usage. This was a project for <a href="https://www.linkedin.com/in/kellymk" target="_blank">Kelly Murdoch-kitt’s</a> interactive design class.'
         },
         {
           image: 'noneed-02.png',
-          text: ''
+          text: 'We conducted in-depth user research and interviews. This included creating personas, scenarios, and user-flows.'
         },
         {
           image: 'noneed-03.png',
@@ -174,19 +204,19 @@ var UXUIProjects = {
         },
         {
           image: 'noneed-11.png',
-          text: ''
+          text: 'We used note cards to map out all the content we thought the app needed in included. We then organized them into categories with hierarchical consideration.'
         },
         {
           image: 'noneed-12.png',
-          text: ''
+          text: 'These note cards were then conceptualized into a full site-map.'
         },
         {
           image: 'noneed-13.jpg',
-          text: ''
+          text: 'For the first round of mocks, I explored image-backgrounds that spoke to the content.'
         },
         {
           image: 'noneed-14.jpg',
-          text: ''
+          text: 'In the end, the result was a cleaner, simpler palette that allowed users to focus on the content itself.'
         }
       ]
     },

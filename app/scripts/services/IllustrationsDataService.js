@@ -5,7 +5,7 @@ var IllustrationsShowcase = {
     {id: '01', image: 'icon-illustrations-01.png'},
     {id: '02', image: 'icon-illustrations-02.png'},
     {id: '03', image: 'icon-illustrations-03.png'},
-    {id: '04', image: 'placeholder-26.png'},
+    {id: '04', image: 'icon-illustrations-04.png'},
     {id: '05', image: 'placeholder-26.png'},
     {id: '06', image: 'placeholder-26.png'}
   ],
@@ -98,8 +98,29 @@ var IllustrationsProjects = {
       ]
     },
     '04': {
-      title: 'Rabbit thing',
-      panes: []
+      title: 'For Me',
+      panes: [
+        {
+          image: 'forme-01.jpg',
+          text: ''
+        },
+        {
+          image: 'forme-02.jpg',
+          text: ''
+        },
+        {
+          image: 'forme-03.gif',
+          text: ''
+        },
+        {
+          image: 'forme-04.gif',
+          text: ''
+        },
+        {
+          image: 'forme-05.png',
+          text: ''
+        }
+      ]
     },
     '05': {
       title: 'Lol blocks',
