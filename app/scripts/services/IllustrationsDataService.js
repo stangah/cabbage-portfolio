@@ -2,12 +2,42 @@
 
 var IllustrationsShowcase = {
   projects: [
-    {id: '01', image: 'icon-illustrations-01.png'},
-    {id: '02', image: 'icon-illustrations-02.png'},
-    {id: '03', image: 'icon-illustrations-03.png'},
-    {id: '04', image: 'icon-illustrations-04.png'},
-    {id: '05', image: 'placeholder-26.png'},
-    {id: '06', image: 'placeholder-26.png'}
+    {
+      id: '01',
+      image: 'icon-illustrations-01.png',
+      title: '',
+      text: ''
+    },
+    {
+      id: '02',
+      image: 'icon-illustrations-02.png',
+      title: '',
+      text: ''
+    },
+    {
+      id: '03',
+      image: 'icon-illustrations-03.png',
+      title: '',
+      text: ''
+    },
+    {
+      id: '04',
+      image: 'icon-illustrations-04.png',
+      title: '',
+      text: ''
+    },
+    {
+      id: '05',
+      image: 'placeholder-26.png',
+      title: '',
+      text: ''
+    },
+    {
+      id: '06',
+      image: 'placeholder-26.png',
+      title: '',
+      text: ''
+    }
   ],
 
   title: 'Illustrations',
