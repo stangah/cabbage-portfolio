@@ -92,7 +92,7 @@ var UXUIProjects = {
           text: 'Ohey is a mobile app that embraces the anti-socialness of young people today. This was a project for <a href="http://www.myintdesign.com/" target="_blank">Karin Myint’s</a> Typography class.'
         },
         {
-          image: 'ohey-02.jpg',
+          image: 'ohey-02.png',
           text: 'The site map features messaging, camera and map views, and basic account access.'
         },
         {
