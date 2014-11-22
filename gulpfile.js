@@ -6,9 +6,11 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var argv = require('yargs').argv;
+var vinylPaths = require('vinyl-paths');
+var runSequence = require('run-sequence');
 
 gulp.task('copy', function() {
-    gulp.src([
+    return gulp.src([
         './app/downloads/**/*',
         './app/scripts/**/*',
         './app/views/**/*',
@@ -19,7 +21,7 @@ gulp.task('copy', function() {
     });
 
 gulp.task('scripts', function() {
-    gulp.src('app/scripts/main.js')
+    return gulp.src('app/scripts/main.js')
         .pipe($.browserify({
             insertGlobals : true
         }))
@@ -49,15 +51,18 @@ gulp.task('images', function () {
 });
 
 gulp.task('image-move', function() {
-    gulp.src('images-pre', {base: './assets'})
+    return gulp.src('./app/images-pre/**/*')
         .pipe(gulp.dest('app/images-post'));
+});
+
+gulp.task('image-clean', function (cb) {
+    return del(['./app/images-pre/**/*'], cb);
 });
 
 gulp.task('clean', function (cb) {
     var files  = argv.azure ? ['azure'] : ['.tmp', 'dist'];
-    del(files, cb);
+    return del(files, cb);
 });
-
 
 gulp.task('connect', function () {
     var connect = require('connect');
@@ -93,6 +98,9 @@ gulp.task('watch', ['connect', 'serve'], function () {
     });
 
     gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/scripts/**/*.js', ['scripts']);
 });
 
-gulp.task('build', ['scripts', 'styles', 'images', 'image-move', 'copy']);
+gulp.task('build', function(cb) {
+    runSequence(['scripts', 'styles', 'images'], 'image-move', 'image-clean', 'copy', cb);
+});
