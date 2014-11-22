@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+if [[ -n $(git status -s) ]]
+  then echo "Please commit your changes before you try deploying to azure" && exit 42
+fi
+
+gulp build --azure
+git add azure/.
+git commit -m "temp for azure"
+git push azure -f
+git reset --hard HEAD^
+gulp clean --azure
+echo "Finished deploying to Azure"

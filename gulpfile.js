@@ -9,11 +9,12 @@ var argv = require('yargs').argv;
 
 gulp.task('copy', function() {
     gulp.src([
-        './app/downloads/**',
-        './app/scripts/**',
-        './app/views/**',
-        './app/images/**'
-    ])
+        './app/downloads/**/*',
+        './app/scripts/**/*',
+        './app/views/**/*',
+        './app/images/**/*',
+        './app/index.html'
+    ], {base: './app/'})
         .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
     });
 
@@ -53,7 +54,7 @@ gulp.task('image-move', function() {
 });
 
 gulp.task('clean', function (cb) {
-    var files  = $.if(argv.azure, ['azure'], ['.tmp', 'dist'])
+    var files  = argv.azure ? ['azure'] : ['.tmp', 'dist'];
     del(files, cb);
 });
 
