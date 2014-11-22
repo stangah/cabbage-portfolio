@@ -34,9 +34,9 @@ var UXUIShowcase = {
     },
     {
       id: '06',
-      image: 'placeholder-26.png',
-      title: 'Fun Project Title',
-      text: 'Something something'
+      image: 'icon-uxui-06.png',
+      title: 'Crowdtilt',
+      text: 'I interned at Crowdtilt (now simply known as “Tilt”) over the fall of 2013.'
     }
   ],
 
@@ -221,8 +221,21 @@ var UXUIProjects = {
       ]
     },
     '06': {
-      title: '',
-      panes: []
+      title: 'Crowdtilt',
+      panes: [
+        {
+          image: 'crowdtilt-01.png',
+          text: 'Throughout my internship, I worked both the design team and marketing team. Alongside the marketing team, I created pixel-perfect emails that followed a strict grid.'
+        },
+        {
+          image: 'crowdtilt-02.png',
+          text: 'I also worked on mobile friendly infographics that illustrated successful tilts. A tilt means that a targeted amount of funds have been raised. The fund is often used towards social good.'
+        },
+        {
+          image: 'crowdtilt-03.png',
+          text: 'This was a poster used in-house that featured bobble-heads that were recently purchased around the office.'
+        }
+      ]
     }
   }
 

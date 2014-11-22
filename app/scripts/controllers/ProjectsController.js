@@ -13,7 +13,7 @@ var ProjectsController = function($scope, $stateParams, dataProvider) {
     else if($(this).scrollTop() <= (pos.top - 20) && container.hasClass('fixed')){ container.removeClass('fixed'); spacer.hide(); }
   });
 
-  $scope.currentId = $stateParams.id || 19;
+  $scope.currentId = $stateParams.id || '01';
   $scope.thumbnailStyle = function(id) {
     return {
       'background': 'url("../images/thumbnail-' + $scope.label + '-' + id + '.png") 0 0',
