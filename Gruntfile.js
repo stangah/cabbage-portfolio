@@ -27,12 +27,12 @@ module.exports = function (grunt) {
         browserify: {
             dev: {
                 files: {
-                    'dist/bundle.js': ['app/scripts/main.js']
+                    'dist/main.js': ['app/scripts/main.js']
                 }
             },
             azure: {
                 files: {
-                    'azure/bundle.js': ['app/scripts/main.js']
+                    'azure/main.js': ['app/scripts/main.js']
                 }
             }
         },
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
             azure: {
                 options: {
                     sassDir: 'app/styles',
-                    cssDir: 'azure/css'
+                    cssDir: 'azure/styles'
                 }
             }
         },

@@ -5,24 +5,25 @@ var gulp = require('gulp');
 // load plugins
 var $ = require('gulp-load-plugins')();
 var del = require('del');
+var argv = require('yargs').argv;
 
 gulp.task('copy', function() {
     gulp.src([
-            './app/downloads/**',
-            './app/scripts/**',
-            './app/views/**',
-            './app/images/**'
-        ], {base: './assets'})
-        .pipe(gulp.dest('.tmp'));
-});
+        './app/downloads/**',
+        './app/scripts/**',
+        './app/views/**',
+        './app/images/**'
+    ])
+        .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
+    });
 
 gulp.task('scripts', function() {
     gulp.src('app/scripts/main.js')
         .pipe($.browserify({
-          insertGlobals : true
+            insertGlobals : true
         }))
-        .pipe(gulp.dest('.tmp'));
-});
+        .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
+    });
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
@@ -31,7 +32,7 @@ gulp.task('styles', function () {
             precision: 10
         }))
         .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('.tmp/styles'))
+        .pipe($.if(argv.azure, gulp.dest('azure/styles'), gulp.dest('.tmp/styles')))
         .pipe($.size());
 });
 
@@ -52,10 +53,8 @@ gulp.task('image-move', function() {
 });
 
 gulp.task('clean', function (cb) {
-    del([
-        '.tmp',
-        'dist'
-    ], cb);
+    var files  = $.if(argv.azure, ['azure'], ['.tmp', 'dist'])
+    del(files, cb);
 });
 
 
@@ -80,17 +79,19 @@ gulp.task('serve', ['connect', 'build'], function () {
 
 gulp.task('watch', ['connect', 'serve'], function () {
     var server = $.livereload();
+    server.changed();
 
     gulp.watch([
-        '.tmp/**'
+        '.tmp/styles/**/*.css',
+        '.tmp/main.js',
+        'app/views/**/*.html',
+        'app/downloads/**/*',
+        'app/images/**/*'
     ]).on('change', function (file) {
         server.changed(file.path);
     });
 
     gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/images-pre/**/*', ['images']);
-    gulp.watch(['app/views/**/*', 'app/index.html'], ['copy']);
 });
 
 gulp.task('build', ['scripts', 'styles', 'images', 'image-move', 'copy']);
