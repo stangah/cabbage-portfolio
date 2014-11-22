@@ -13,9 +13,17 @@ $text-grey: #888;
     .reach{
       width: 500px;
       margin-bottom: 50px;
+      ::-webkit-input-placeholder {
+        font-size: 15px;
+        font-family: 'Merriweather', serif;
+        font-weight: 300;
+        font-style: italic;
+        color: #CBCBCB;
+      }
       input{
         width: 488px;
         height: 35px;
+        line-height: normal;
         padding-left: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
@@ -34,6 +42,56 @@ $text-grey: #888;
         background-size: 120px 100px;
         &:hover{
           background-position: 0 -50px;
+        }
+      }
+    }
+
+    .info{
+      border: 1px solid red;
+      font-size: 16px;
+      color: #808080;
+      font-weight: 300;
+      line-height: 200%;
+      .inner{
+        border: 1px solid purple;
+        width: 420px;
+        margin: 0 auto;
+      }
+      .italic{
+        font-style: italic;
+      }
+      .bold{
+        font-weight: 700;
+      }
+      i{
+        display: inline-block;
+        margin: 0 5px;
+        height: 15px;
+        width: 15px;
+        &.phone{
+          background: url('../images/contact-icons.png') 0 0;
+          background-repeat: no-repeat;
+          background-size: 15px 75px;
+        }
+        &.mail{
+          background: url('../images/contact-icons.png') 0px -15px;
+          background-repeat: no-repeat;
+          background-size: 15px 75px;
+        }
+        &.linkedin{
+          background: url('../images/contact-icons.png') 0px -30px;
+          background-repeat: no-repeat;
+          background-size: 15px 75px;
+        }
+        &.behance{
+          background: url('../images/contact-icons.png') 0px -45px;
+          background-repeat: no-repeat;
+          background-size: 15px 75px;
+        }
+        &.facebook{
+          background: url('../images/contact-icons.png') 0px -60px;
+          background-repeat: no-repeat;
+          background-size: 15px 75px;
         }
       }
     }

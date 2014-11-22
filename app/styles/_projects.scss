@@ -20,7 +20,7 @@ $text-grey: #888;
   .thumbnails-spacer{
     display: none;
     height: 700px;
-    width: 70px;
+    width: 100px;
     margin: 0;
     padding: 0;
   }
@@ -29,10 +29,11 @@ $text-grey: #888;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 3.5px;
     a.project-thumbnails{
       display: block;
       margin-bottom: 15px;
-      width: 70px;
+      width: 100px;
       height: 70px;
       &:hover{
         background-position: 0 -70px !important;
@@ -40,6 +41,11 @@ $text-grey: #888;
       &.clicked{
         background-position: 0 -70px !important;
       }
+    }
+    &.fixed {
+      position: fixed;
+      top: 20px;
+      padding-left: 0;
     }
   }
 

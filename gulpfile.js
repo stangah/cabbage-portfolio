@@ -35,6 +35,7 @@ gulp.task('styles', function () {
             precision: 10
         }))
         .pipe($.autoprefixer('last 1 version'))
+        .on('error', function (err) { console.log(err.message); })
         .pipe($.if(argv.azure, gulp.dest('azure/styles'), gulp.dest('.tmp/styles')))
         .pipe($.size());
 });
@@ -92,7 +93,8 @@ gulp.task('watch', ['connect', 'serve'], function () {
         '.tmp/main.js',
         'app/views/**/*.html',
         'app/downloads/**/*',
-        'app/images/**/*'
+        'app/images/**/*',
+        'app/index.html'
     ]).on('change', function (file) {
         server.changed(file.path);
     });
