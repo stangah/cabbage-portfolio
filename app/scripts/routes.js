@@ -1,5 +1,7 @@
 'use strict';
 
+var dependencies = ['$stateProvider', '$urlRouterProvider'];
+
 var router = function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
@@ -57,4 +59,4 @@ var router = function($stateProvider, $urlRouterProvider) {
     });
 };
 
-module.exports = router;
+module.exports = dependencies.concat(router);

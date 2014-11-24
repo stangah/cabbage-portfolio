@@ -12,7 +12,6 @@ var runSequence = require('run-sequence');
 gulp.task('copy', function() {
     return gulp.src([
         './app/downloads/**/*',
-        './app/scripts/**/*',
         './app/views/**/*',
         './app/images/**/*',
         './app/index.html'
@@ -25,6 +24,7 @@ gulp.task('scripts', function() {
         .pipe($.browserify({
             insertGlobals : true
         }))
+        .pipe($.uglify())
         .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
     });
 
