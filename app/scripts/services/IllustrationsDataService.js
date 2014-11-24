@@ -59,23 +59,23 @@ var IllustrationsProjects = {
       panes: [
         {
           image: 'boat-proj-01.png',
-          text: ''
+          text: 'Full view of the digital portion of the Boat Project, created in illustrator. The style here was inspired by the recently trendy flat design and Material Design.'
         },
         {
           image: 'boat-proj-02.gif',
-          text: ''
+          text: 'Prior to executing in illustrator, I sketched out the general outline and feel of the boats. I felt this was necessary because the reference photos I took had messy, unidentifiable objects that wouldn’t be suitable for the drawing.'
         },
         {
           image: 'boat-proj-03.gif',
-          text: ''
+          text: 'Some close-ups of the digital rendering.'
         },
         {
           image: 'boat-proj-04.gif',
-          text: ''
+          text: 'I also created a watercolor version of the Boats, just to explore the possibilities of different medias.'
         },
         {
           image: 'boat-proj-05.png',
-          text: ''
+          text: 'The outlines in illustrator shows the complexity of the various layers.'
         },
       ]
     },
@@ -85,7 +85,7 @@ var IllustrationsProjects = {
       panes: [
         {
           image: 'invites-proj-01.jpg',
-          text: ''
+          text: 'The decorative line-work in the top corners were inspired by the silhouette of orchid flowers and victorian-era flourishes. To create a both modern and elegant feel, I rendered the flourishes in monoline. I also mixed the very classic typeface Scala with the geometric typeface Gotham. '
         },
         {
           image: 'invites-proj-02.jpg',
@@ -132,23 +132,23 @@ var IllustrationsProjects = {
       panes: [
         {
           image: 'forme-01.jpg',
-          text: ''
+          text: 'For Me With Love is a gift box the celebrates loving yourself. This was a project for  <a target="_blank" href="http://www.ingallsdesign.com/"> Tom Ingalls’s</a> Packaging Design class.'
         },
         {
           image: 'forme-02.jpg',
-          text: ''
+          text: 'The gift set includes pink moscato, chocolate thins, bath salts, and nail polish. Each product has an individual title, such as indulge, pamper, relax, and breath. It also features a wine glass that would be engraved with flourishes.'
         },
         {
           image: 'forme-03.gif',
-          text: ''
+          text: 'All of the products embody the same playful, loving, and elegant ambience. The designs on each product is modified to not seem repetitive and also speak to the same language.'
         },
         {
           image: 'forme-04.gif',
-          text: ''
+          text: 'The box was laser cut to embrace the exciting, dramatic flourishes.'
         },
         {
           image: 'forme-05.png',
-          text: ''
+          text: 'The motif I designed establishes the entire look and feel of all the products. The flourishes were hand-drawn and then vectorized.'
         }
       ]
     },
