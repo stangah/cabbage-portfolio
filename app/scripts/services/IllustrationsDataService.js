@@ -107,23 +107,23 @@ var IllustrationsProjects = {
       panes: [
         {
           image: 'kattish-01.jpg',
-          text: 'This project was inspired by Pokemon because they are very cute and magical. The instructor of this Poke project was Brett Macfadden of Macfadden and Thorpe. It had the honor to be featured in Elle magazine as a tribute to the recent Poke master\'s death. The incident was such morbid.'
+          text: 'This was an experimental project for <a target="_blank" href="http://macfaddenandthorpe.com/"> Brett MacFadden’s</a> Graphic Design class. Each student was assigned a non-lyrical music piece, and had to come up with three words describing their assigned music. We later on created imagery and textures based on these words.'
         },
         {
           image: 'kattish-02.jpg',
-          text: 'Little text like this can explain each image within the project. For example, "This is an early exploration that led to xoxoxo."'
+          text: 'I eventually developed various freehand drawings of cats, and thus decided to expand in that direction. According to the urban dictionary, “Kattish” means lazy and unmotivated like an average house cat.'
         },
         {
           image: 'kattish-03.gif',
-          text: 'Little text like this can explain each image within the project. For example, "This is an early exploration that led to xoxoxo."'
+          text: 'The pattern features the cats fantasizing about questionable thoughts.'
         },
         {
           image: 'kattish-04.jpg',
-          text: ''
+          text: 'The interior of the vinyl sleeve introduces a lush magenta color, as an unexpected surprise when the sleeve is opened. '
         },
         {
           image: 'kattish-05.gif',
-          text: ''
+          text: 'A simple hand-illustrated booklet to accompany the sleeve.'
         }
       ]
     },

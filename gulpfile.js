@@ -104,5 +104,5 @@ gulp.task('watch', ['connect', 'serve'], function () {
 });
 
 gulp.task('build', function(cb) {
-    runSequence(['scripts', 'styles', 'images'], 'image-move', 'image-clean', 'copy', cb);
+    runSequence('clean', ['scripts', 'styles', 'images'], 'image-move', 'image-clean', 'copy', cb);
 });
