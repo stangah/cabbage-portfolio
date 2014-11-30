@@ -11,40 +11,40 @@
         <div>
           <span class="italic">call me......................</span>
           <i class="phone"></i>
-          <span class="bold">(415) 738-9592</span>
+          <a ng-href="{{links.phone}}" class="bold">(415) 738-9592</a>
         </div>
 
         <div>
           <span class="italic">gchat or email.........</span>
           <i class="mail"></i>
-          <span class="bold">chenjengjia@gmail.com</span>
+          <a ng-href="{{links.email}}" target="_self" class="bold">chenjengjia@gmail.com</a>
         </div>
 
         <div>
           <span class="italic">connect with............</span>
           <i class="linkedin"></i>
-          <span class="bold">Linkedin</span>
+          <a ng-href="{{links.linkedin}}" class="bold">Linkedin</a>
         </div>
 
         <div>
           <span class="italic">follow on..................</span>
           <i class="behance"></i>
-          <span class="bold">Behance</span>
+          <a ng-href="{{links.behance}}" class="bold">Behance</a>
         </div>
 
         <div>
           <span class="italic">message me.............</span>
           <i class="facebook"></i>
-          <span class="bold">Facebook</span>
+          <a ng-href="{{links.facebook}}" class="bold">Facebook</a>
         </div>
       </div>
     </div>
 
     <div class="reach">
 
-      <input type="text" placeholder="your name">
-      <input type="text" placeholder="your email">
-      <input class="msg" type="text" placeholder="short message">
+      <input class="reach-field" type="text" placeholder="your name">
+      <input class="reach-field" type="text" placeholder="your email">
+      <textarea class="msg reach-field" type="text" placeholder="short message"></textarea>
 
       <div class="submit"></div>
 

@@ -3,7 +3,8 @@
 var LinkFooterDirective = function() {
   return {
     restrict: 'E',
-    templateUrl: '../views/link-footer.html'
+    templateUrl: '../views/link-footer.html',
+    controller: 'MainController'
   };
 };
 

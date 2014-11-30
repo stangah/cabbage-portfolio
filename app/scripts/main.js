@@ -6,6 +6,7 @@ var sanitize = require('angular-sanitize');
 
 var IllustrationsDataService = require('./services/IllustrationsDataService');
 var UXUIDataService = require('./services/UXUIDataService');
+var Links = require('./services/URLService');
 
 var ShowcaseController = require('./controllers/ShowcaseController');
 var ProjectsController = require('./controllers/ProjectsController');
@@ -18,9 +19,16 @@ var app = angular.module('myApp', ['ui.router', 'ngSanitize']);
 
 app.constant('IllustrationsData', IllustrationsDataService);
 app.constant('UXUIData', UXUIDataService);
+app.constant('Links', Links);
 
 app.controller('ShowcaseController', ShowcaseController);
 app.controller('ProjectsController', ProjectsController);
+
+app.controller('MainController', ['$scope', 'Links', function($scope, links) {
+  $scope.links = links;
+}]);
+
+
 app.directive('linkFooter', LinkFooterDirective);
 app.directive('headerLogo', HeaderLogoDirective);
 app.config(routes);

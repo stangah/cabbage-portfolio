@@ -9,11 +9,17 @@ var router = function($stateProvider, $urlRouterProvider) {
   //
   // Now set up the states
   $stateProvider
-    .state('root', {
+    .state('main', {
+      abstract: true,
+      url: '',
+      template: '<ui-view/>',
+      controller: 'MainController'
+    })
+    .state('main.root', {
       url: '/',
       templateUrl: '../views/root.html'
     })
-    .state('illustrations', {
+    .state('main.illustrations', {
       url: '/illustrations',
       controller: 'ShowcaseController',
       templateUrl: '../views/showcase.html',
@@ -21,7 +27,7 @@ var router = function($stateProvider, $urlRouterProvider) {
         dataProvider: 'IllustrationsData'
       }
     })
-    .state('illustrationsProjects', {
+    .state('main.illustrationsProjects', {
       url: '/illustrations/projects/:id',
       controller: 'ProjectsController',
       templateUrl: '../views/projects.html',
@@ -29,7 +35,7 @@ var router = function($stateProvider, $urlRouterProvider) {
         dataProvider: 'IllustrationsData'
       }
     })
-    .state('uxui', {
+    .state('main.uxui', {
       url: '/uxui',
       controller: 'ShowcaseController',
       templateUrl: '../views/showcase.html',
@@ -37,7 +43,7 @@ var router = function($stateProvider, $urlRouterProvider) {
         dataProvider: 'UXUIData'
       }
     })
-    .state('uxuiProjects', {
+    .state('main.uxuiProjects', {
       url: '/uxui/projects/:id',
       controller: 'ProjectsController',
       templateUrl: '../views/projects.html',
@@ -45,15 +51,15 @@ var router = function($stateProvider, $urlRouterProvider) {
         dataProvider: 'UXUIData'
       }
     })
-    .state('resume', {
+    .state('main.resume', {
       url: '/resume',
       templateUrl: '../views/resume.html'
     })
-    .state('about', {
+    .state('main.about', {
       url: '/about',
       templateUrl: '../views/about.html'
     })
-    .state('contact', {
+    .state('main.contact', {
       url: '/contact',
       templateUrl: '../views/contact.html'
     });
