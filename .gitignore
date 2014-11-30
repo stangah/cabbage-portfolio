@@ -24,3 +24,4 @@ Temporary Items
 dist/
 node_modules/
 .tmp/
+etc/config.json
