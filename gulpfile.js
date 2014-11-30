@@ -22,9 +22,15 @@ gulp.task('copy', function() {
 gulp.task('scripts', function() {
     return gulp.src('app/scripts/main.js')
         .pipe($.browserify({
-            insertGlobals : true
+            insertGlobals : true,
+            shim: {
+                angular: {
+                    path: 'node_modules/angular/angular.js',
+                    exports: 'angular'
+                },
+            }
         }))
-        .pipe($.uglify())
+        .pipe($.if(!argv.pretty, $.uglify()))
         .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
     });
 
