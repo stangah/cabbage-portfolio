@@ -4,14 +4,13 @@ $text-grey: #888;
 
 .contact-view{
   .content{
-    border: 1px solid blue;
-    width: 100%;
+    width: 1000px;
     display: flex;
     >div{
-      width: 50%;
+      width: 600px;
     }
     .reach{
-      width: 500px;
+      width: 600px;
       margin-bottom: 50px;
       ::-webkit-input-placeholder {
         font-size: 15px;
@@ -20,17 +19,19 @@ $text-grey: #888;
         font-style: italic;
         color: #CBCBCB;
       }
-      input{
-        width: 488px;
+      .reach-field{
+        width: 485px;
         height: 35px;
-        line-height: normal;
         padding-left: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
         border: 1px solid $jia-orange;
         font-size: 15px;
+        outline: none;
         &.msg{
-          height: 300px;
+          resize: none;
+          padding-top: 10px;
+          height: 290px;
         }
       }
       .submit{
@@ -47,15 +48,23 @@ $text-grey: #888;
     }
 
     .info{
-      border: 1px solid red;
       font-size: 16px;
       color: #808080;
       font-weight: 300;
       line-height: 200%;
       .inner{
-        border: 1px solid purple;
         width: 420px;
         margin: 0 auto;
+        a{
+          color: $link-blue;
+          font-size: 16px;
+          font-weight: 300;
+          text-decoration: none;
+          &:hover{
+            color: $jia-orange;
+            cursor: pointer;
+          }
+        }
       }
       .italic{
         font-style: italic;

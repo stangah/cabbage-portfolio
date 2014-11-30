@@ -33,6 +33,7 @@ html, body{
 
 .main-container{
   padding: 40px 60px 60px 60px;
+  min-width: 1000px;
 }
 
 .header{
@@ -42,11 +43,12 @@ html, body{
   background-size: 1200px 100px;
   height: 100px;
   width: 100%;
+  min-width: 1120px;
   text-align: center;
   a.home-link{
     display: inline-block;
     height: 100px;
-    width: 1200px;
+    min-width: 1120px;
   }
 }
 
