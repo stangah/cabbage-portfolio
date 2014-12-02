@@ -19,6 +19,13 @@ gulp.task('copy', function() {
         .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
     });
 
+gulp.task('config', function() {
+    return gulp.src([
+        './etc/config.json'
+    ], {base: './etc/'})
+        .pipe($.if(argv.azure, gulp.dest('azure')));
+    });
+
 gulp.task('scripts', function() {
     return gulp.src('app/scripts/main.js')
         .pipe($.browserify({
@@ -110,5 +117,5 @@ gulp.task('watch', ['connect', 'serve'], function () {
 });
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['scripts', 'styles', 'images'], 'image-move', 'image-clean', 'copy', cb);
+    runSequence('clean', ['scripts', 'styles', 'images'], 'image-move', 'image-clean', 'copy', 'config', cb);
 });

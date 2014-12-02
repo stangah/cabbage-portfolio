@@ -40,15 +40,33 @@
       </div>
     </div>
 
-    <div class="reach">
+    <div>
 
-      <input class="reach-field" type="text" placeholder="your name">
-      <input class="reach-field" type="text" placeholder="your email">
-      <textarea class="msg reach-field" type="text" placeholder="short message"></textarea>
+    <form name="form" class="reach">
 
-      <div class="submit"></div>
+      <input
+        class="reach-field" type="text" placeholder="your name"
+        ng-model="name" required
+        ng-model-options="{updateOn: 'default blur'}"
+        ng-class="{error: nameBad}">
+      <input class="reach-field" type="email" placeholder="your email"
+        ng-model="email" required
+        ng-model-options="{updateOn: 'default blur'}"
+        ng-class="{error: emailBad}">
+      <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
+        <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+        <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+      </div>
+      <textarea class="msg reach-field" type="text" placeholder="short message"
+        ng-model="msg" required
+        ng-model-options="{updateOn: 'default blur'}"
+        ng-class="{error: msgBad}"></textarea>
 
-    </div>
+      <button class="send"
+        ng-click="sendMsg()"
+        ng-disabled="form.$invalid"></button>
+
+    </form>
 
 
   </div>
