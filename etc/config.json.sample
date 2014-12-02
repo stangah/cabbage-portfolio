@@ -1,0 +1,14 @@
+{
+
+  "contactEmail": {
+    "user": "email address",
+    "pass": "userpass"
+  },
+
+  "mailOptions": {
+    "from": "sending from",
+    "to": "sending to",
+    "subject": "You were contacted by someone from YOURDOMAIN"
+  }
+
+}
