@@ -10,6 +10,7 @@ var Links = require('./services/URLService');
 
 var ShowcaseController = require('./controllers/ShowcaseController');
 var ProjectsController = require('./controllers/ProjectsController');
+var ContactController = require('./controllers/ContactController');
 var LinkFooterDirective = require('./directives/LinkFooterDirective');
 var HeaderLogoDirective = require('./directives/HeaderLogoDirective');
 var routes = require('./routes');
@@ -23,6 +24,7 @@ app.constant('Links', Links);
 
 app.controller('ShowcaseController', ShowcaseController);
 app.controller('ProjectsController', ProjectsController);
+app.controller('ContactController', ContactController);
 
 app.controller('MainController', ['$scope', 'Links', function($scope, links) {
   $scope.links = links;

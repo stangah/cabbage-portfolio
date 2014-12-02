@@ -61,6 +61,7 @@ var router = function($stateProvider, $urlRouterProvider) {
     })
     .state('main.contact', {
       url: '/contact',
+      controller: 'ContactController',
       templateUrl: '../views/contact.html'
     });
 };
