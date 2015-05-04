@@ -93,28 +93,41 @@ $text-grey: #888;
         &.phone{
           background: url('../images/contact-icons.png') 0 0;
           background-repeat: no-repeat;
-          background-size: 15px 75px;
+          background-size: 16px 100px;
         }
         &.mail{
-          background: url('../images/contact-icons.png') 0px -15px;
+          background: url('../images/contact-icons.png') 0px -17px;
           background-repeat: no-repeat;
-          background-size: 15px 75px;
+          background-size: 16px 100px;
         }
         &.linkedin{
-          background: url('../images/contact-icons.png') 0px -30px;
+          background: url('../images/contact-icons.png') 0px -34px;
           background-repeat: no-repeat;
-          background-size: 15px 75px;
+          background-size: 16px 100px;
         }
         &.behance{
-          background: url('../images/contact-icons.png') 0px -45px;
+          background: url('../images/contact-icons.png') 0px -51px;
           background-repeat: no-repeat;
-          background-size: 15px 75px;
+          background-size: 16px 100px;
+        }
+        &.instagram{
+          background: url('../images/contact-icons.png') 0px -68px;
+          background-repeat: no-repeat;
+          background-size: 16px 100px;
         }
         &.facebook{
-          background: url('../images/contact-icons.png') 0px -60px;
+          background: url('../images/contact-icons.png') 0px -85px;
           background-repeat: no-repeat;
-          background-size: 15px 75px;
+          background-size: 16px 100px;
         }
+      }
+      .profile{
+        width: 200px;
+        height: 200px;
+        margin: 20px 0 0 90px;
+        background: url('../images/profile_small.png');
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
       }
     }
   }
