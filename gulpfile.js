@@ -16,14 +16,14 @@ gulp.task('copy', function() {
         './app/images/**/*',
         './app/index.html'
     ], {base: './app/'})
-        .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
+        .pipe($.if(argv.deploy, gulp.dest('heroku'), gulp.dest('.tmp')));
     });
 
 gulp.task('config', function() {
     return gulp.src([
         './etc/config.json'
     ], {base: './etc/'})
-        .pipe($.if(argv.azure, gulp.dest('azure')));
+        .pipe($.if(argv.deploy, gulp.dest('heroku')));
     });
 
 gulp.task('scripts', function() {
@@ -38,7 +38,7 @@ gulp.task('scripts', function() {
             }
         }))
         .pipe($.if(!argv.pretty, $.uglify()))
-        .pipe($.if(argv.azure, gulp.dest('azure'), gulp.dest('.tmp')));
+        .pipe($.if(argv.deploy, gulp.dest('heroku'), gulp.dest('.tmp')));
     });
 
 gulp.task('styles', function () {
@@ -49,7 +49,7 @@ gulp.task('styles', function () {
         }))
         .pipe($.autoprefixer('last 1 version'))
         .on('error', function (err) { console.log(err.message); })
-        .pipe($.if(argv.azure, gulp.dest('azure/styles'), gulp.dest('.tmp/styles')))
+        .pipe($.if(argv.deploy, gulp.dest('heroku/styles'), gulp.dest('.tmp/styles')))
         .pipe($.size());
 });
 
@@ -74,7 +74,7 @@ gulp.task('image-clean', function (cb) {
 });
 
 gulp.task('clean', function (cb) {
-    var files  = argv.azure ? ['azure'] : ['.tmp', 'dist'];
+    var files  = argv.deploy ? ['heroku'] : ['.tmp', 'dist'];
     return del(files, cb);
 });
 

@@ -1,9 +1,9 @@
 var express = require('express');
 var _ = require('lodash');
 var app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var jf = require('jsonfile');
-var config = jf.readFileSync('azure/config.json');
+var config = jf.readFileSync('heroku/config.json');
 
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
@@ -11,10 +11,10 @@ var transporter = nodemailer.createTransport({
     auth: config.contactEmail
 });
 
-app.use(express.static(__dirname + '/azure'));
+app.use(express.static(__dirname + '/heroku'));
 
 app.get('/', function(req, res){
-  res.sendfile(__dirname + '/azure/index.html');
+  res.sendfile(__dirname + '/heroku/index.html');
 });
 
 app.post('/contact', bodyParser.json(), function(req, res) {
