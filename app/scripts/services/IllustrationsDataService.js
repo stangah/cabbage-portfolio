@@ -40,7 +40,7 @@ var IllustrationsShowcase = {
     }
   ],
 
-  title: 'Illustrations',
+  title: 'Visual Design',
 
   section: 'illustrations',
 
